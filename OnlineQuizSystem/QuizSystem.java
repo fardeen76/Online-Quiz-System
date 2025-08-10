@@ -33,14 +33,14 @@ public class QuizSystem {
                     exitSystem();
                     return;
                 default:
-                    System.out.println("❌ Invalid choice! Please try again.");
+                    System.out.println("Invalid choice! Please try again.");
             }
         }
     }
     
     private void displayWelcomeMessage() {
         System.out.println("\n" + "=".repeat(80));
-        System.out.println("🎓 WELCOME TO THE ONLINE QUIZ SYSTEM 🎓");
+        System.out.println(" WELCOME TO THE ONLINE QUIZ SYSTEM ");
         System.out.println("=".repeat(80));
         System.out.println("Test your knowledge with our multiple-choice questions!");
         System.out.println("Features: User login, interactive quiz, instant scoring");
@@ -48,28 +48,28 @@ public class QuizSystem {
     }
     
     private void login() {
-        System.out.println("\n📝 USER LOGIN");
+        System.out.println("\n USER LOGIN");
         System.out.println("-".repeat(20));
         System.out.print("Enter your username: ");
         String username = scanner.nextLine().trim();
         
         if (username.isEmpty()) {
-            System.out.println("❌ Username cannot be empty!");
+            System.out.println("Username cannot be empty!");
             return;
         }
         
         currentUser = new User(username);
-        System.out.println("✅ Welcome, " + username + "! You are now logged in.");
+        System.out.println("Welcome, " + username + "! You are now logged in.");
     }
     
     private void showMainMenu() {
         System.out.println("\n" + "=".repeat(50));
-        System.out.println("📋 MAIN MENU");
+        System.out.println(" MAIN MENU");
         System.out.println("=".repeat(50));
-        System.out.println("1. 🎯 Start Quiz");
-        System.out.println("2. 👤 View Profile");
-        System.out.println("3. 🔄 Switch User");
-        System.out.println("4. 🚪 Exit");
+        System.out.println("1.  Start Quiz");
+        System.out.println("2.  View Profile");
+        System.out.println("3.  Switch User");
+        System.out.println("4.  Exit");
         System.out.println("=".repeat(50));
         System.out.print("Choose an option (1-4): ");
     }
@@ -93,7 +93,7 @@ public class QuizSystem {
     
     private void viewProfile() {
         System.out.println("\n" + "=".repeat(40));
-        System.out.println("👤 USER PROFILE");
+        System.out.println(" USER PROFILE");
         System.out.println("=".repeat(40));
         System.out.println("Username: " + currentUser.getUsername());
         System.out.println("Last Quiz Score: " + currentUser.getScore() + "/" + currentUser.getTotalQuestions());
@@ -109,14 +109,14 @@ public class QuizSystem {
     }
     
     private void logout() {
-        System.out.println("👋 Goodbye, " + currentUser.getUsername() + "!");
+        System.out.println(" Goodbye, " + currentUser.getUsername() + "!");
         currentUser = null;
     }
     
     private void exitSystem() {
         System.out.println("\n" + "=".repeat(50));
         System.out.println("Thank you for using the Online Quiz System!");
-        System.out.println("👋 Goodbye and happy learning!");
+        System.out.println(" Goodbye and happy learning!");
         System.out.println("=".repeat(50));
     }
     
@@ -124,4 +124,5 @@ public class QuizSystem {
         QuizSystem system = new QuizSystem();
         system.run();
     }
+
 }
