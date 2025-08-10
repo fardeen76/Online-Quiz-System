@@ -17,7 +17,7 @@ public class Quiz {
         user.resetStats();
         
         System.out.println("\n" + "=".repeat(70));
-        System.out.println("🎯 WELCOME TO THE ONLINE QUIZ SYSTEM 🎯");
+        System.out.println(" WELCOME TO THE ONLINE QUIZ SYSTEM");
         System.out.println("=".repeat(70));
         System.out.println("Hello, " + user.getUsername() + "!");
         System.out.println("You have " + questions.size() + " multiple-choice questions to answer.");
@@ -43,10 +43,10 @@ public class Quiz {
         
         if (question.isCorrect(userAnswer)) {
             user.incrementScore();
-            System.out.println("✅ Correct! Well done.");
+            System.out.println(" Correct! Well done.");
         } else {
             user.incrementIncorrectAnswers();
-            System.out.println("❌ Incorrect. The correct answer was: " + question.getCorrectAnswer());
+            System.out.println(" Incorrect. The correct answer was: " + question.getCorrectAnswer());
         }
         
         if (questionNumber < questions.size()) {
@@ -69,10 +69,10 @@ public class Quiz {
     
     private void displayResults() {
         System.out.println("\n" + "=".repeat(70));
-        System.out.println("🏆 QUIZ COMPLETED! 🏆");
+        System.out.println(" QUIZ COMPLETED! ");
         System.out.println("=".repeat(70));
         
-        System.out.println("📊 FINAL RESULTS FOR: " + user.getUsername());
+        System.out.println(" FINAL RESULTS FOR: " + user.getUsername());
         System.out.println("-".repeat(40));
         System.out.println("Total Questions: " + user.getTotalQuestions());
         System.out.println("Correct Answers: " + user.getCorrectAnswers());
@@ -82,19 +82,20 @@ public class Quiz {
         
         // Performance feedback
         double percentage = user.getPercentage();
-        System.out.println("\n🎭 PERFORMANCE EVALUATION:");
+        System.out.println("\n PERFORMANCE EVALUATION:");
         if (percentage >= 90) {
-            System.out.println("🌟 Outstanding! You're a quiz master!");
+            System.out.println(" Outstanding! You're a quiz master!");
         } else if (percentage >= 80) {
-            System.out.println("🎉 Excellent work! Great job!");
+            System.out.println(" Excellent work! Great job!");
         } else if (percentage >= 70) {
-            System.out.println("👍 Good performance! Keep it up!");
+            System.out.println(" Good performance! Keep it up!");
         } else if (percentage >= 60) {
-            System.out.println("📚 Not bad! Room for improvement.");
+            System.out.println(" Not bad! Room for improvement.");
         } else {
-            System.out.println("📖 Keep studying! You'll do better next time.");
+            System.out.println(" Keep studying! You'll do better next time.");
         }
         
         System.out.println("\n" + "=".repeat(70));
     }
+
 }
