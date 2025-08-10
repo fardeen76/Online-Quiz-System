@@ -228,13 +228,13 @@ public class QuizGUI extends JFrame {
             if (selectedOption == currentQuestion.getCorrectAnswerIndex()) {
                 score++;
                 JOptionPane.showMessageDialog(QuizGUI.this, 
-                    "✅ Correct!", 
+                    "Correct!", 
                     "Result", 
                     JOptionPane.INFORMATION_MESSAGE);
             } else {
                 String correctOption = String.valueOf((char)('A' + currentQuestion.getCorrectAnswerIndex()));
                 JOptionPane.showMessageDialog(QuizGUI.this, 
-                    "❌ Wrong! Correct answer: " + correctOption, 
+                    "Wrong! Correct answer: " + correctOption, 
                     "Result", 
                     JOptionPane.ERROR_MESSAGE);
             }
@@ -271,7 +271,7 @@ public class QuizGUI extends JFrame {
         double percentage = (double) score / totalQuestions * 100;
         
         // Create result labels
-        JLabel congratsLabel = new JLabel("🎉 Quiz Completed! 🎉", SwingConstants.CENTER);
+        JLabel congratsLabel = new JLabel(" Quiz Completed! ", SwingConstants.CENTER);
         congratsLabel.setFont(new Font("Arial", Font.BOLD, 20));
         congratsLabel.setForeground(new Color(34, 139, 34));
         congratsLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -290,19 +290,19 @@ public class QuizGUI extends JFrame {
         String feedback;
         Color feedbackColor;
         if (percentage >= 90) {
-            feedback = "🌟 Outstanding! You're a quiz master!";
+            feedback = " Outstanding! You're a quiz master!";
             feedbackColor = new Color(34, 139, 34);
         } else if (percentage >= 80) {
-            feedback = "🎉 Excellent work! Great job!";
+            feedback = " Excellent work! Great job!";
             feedbackColor = new Color(34, 139, 34);
         } else if (percentage >= 70) {
-            feedback = "👍 Good performance! Keep it up!";
+            feedback = " Good performance! Keep it up!";
             feedbackColor = new Color(255, 140, 0);
         } else if (percentage >= 60) {
-            feedback = "📚 Not bad! Room for improvement.";
+            feedback = " Not bad! Room for improvement.";
             feedbackColor = new Color(255, 140, 0);
         } else {
-            feedback = "📖 Keep studying! You'll do better next time.";
+            feedback = " Keep studying! You'll do better next time.";
             feedbackColor = new Color(220, 20, 60);
         }
         
@@ -401,4 +401,5 @@ public class QuizGUI extends JFrame {
             new QuizGUI().setVisible(true);
         });
     }
+
 }
